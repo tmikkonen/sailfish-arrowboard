@@ -32,16 +32,16 @@ import QtQuick 2.0
 KeyboardRow {
     SymbolKeyNarrow {}
     ContextAwareCommaKey {}
-    LeftArrowKey {}
+    CustomArrowKey { direction: "left" }
     SpacebarKey {
         fixedWidth: true
     }
-    RightArrowKey {}
+    CustomArrowKey { direction: "right" }
     CharacterKey {
         caption: "."
         captionShifted: "."
         accents: ".:;"
-        width: punctuationKeyWidth
+        width: punctuationKeyWidth-7
         fixedWidth: true
         separator: false
     }
