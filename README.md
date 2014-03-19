@@ -11,4 +11,6 @@ No need to replace any system files.
 After copying, remember to restart the maliit server:
 "killall maliit-server"
 
-TODO: RPM package for easier install
+NOTE! Starting from SailfishOS 1.0.4.x the new keyboard must be manually enabled from settings if it has not been in use before 1.0.4.x.
+
+TODO: RPM package for easier installation.
