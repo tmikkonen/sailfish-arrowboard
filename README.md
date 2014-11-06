@@ -1,7 +1,7 @@
 sailfish-en_ios
 ===============
 
-English virtual keyboard with (mostly) iOS layout for SailfishOS. Includes LEFT &amp; RIGHT arrow keys.
+English virtual keyboard with (mostly) iOS layout for SailfishOS. Includes LEFT &amp; RIGHT arrow keys (UP &amp; DOWN in SymView).
 
 File path starts from the device's root (/) directory and you need to be in developer mode (i.e. use "devel-su"). 
 
