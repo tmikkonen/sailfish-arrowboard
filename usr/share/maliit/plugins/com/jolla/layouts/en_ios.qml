@@ -11,9 +11,9 @@ KeyboardLayout {
         CharacterKey { caption: "w"; captionShifted: "W"; symView: "2"; symView2: "]" }
         CharacterKey { caption: "e"; captionShifted: "E"; symView: "3"; symView2: "{"; accents: "eèéêëěę€"; accentsShifted: "EÈÉÊËĚĘ€" }
         CharacterKey { caption: "r"; captionShifted: "R"; symView: "4"; symView2: "}"; accents: "rŕř₹"; accentsShifted: "RŔŘ₹" }
-        CharacterKey { caption: "t"; captionShifted: "T"; symView: "5"; symView2: "#"; accents: "tþ"; accentsShifted: "TÞ" }
+        CharacterKey { caption: "t"; captionShifted: "T"; symView: "5"; symView2: "#"; accents: "tťþ"; accentsShifted: "TŤÞ" }
         CharacterKey { caption: "y"; captionShifted: "Y"; symView: "6"; symView2: "%"; accents: "yýÿ¥"; accentsShifted: "YÝŸ¥" }
-        CharacterKey { caption: "u"; captionShifted: "U"; symView: "7"; symView2: "^"; accents: "uúùüûű"; accentsShifted: "UÚÙÜÛŰ" }
+        CharacterKey { caption: "u"; captionShifted: "U"; symView: "7"; symView2: "^"; accents: "uúùüûůű"; accentsShifted: "UÚÙÜÛŮŰ" }
         CharacterKey { caption: "i"; captionShifted: "I"; symView: "8"; symView2: "*"; accents: "iìíïî"; accentsShifted: "IÌÍÏÎ" }
         CharacterKey { caption: "o"; captionShifted: "O"; symView: "9"; symView2: "+"; accents: "oõœøóòöô"; accentsShifted: "OÕŒØÓÒÖÔ" }
         CharacterKey { caption: "p"; captionShifted: "P"; symView: "0"; symView2: "=" }
@@ -22,7 +22,7 @@ KeyboardLayout {
     KeyboardRow {
         CharacterKey { caption: "a"; captionShifted: "A"; symView: "-"; symView2: "_"; accents: "aàáâäæãåą"; accentsShifted: "AÀÁÂÄÆÃÅĄ"}
         CharacterKey { caption: "s"; captionShifted: "S"; symView: "/"; symView2: "\\"; accents: "sßśš$"; accentsShifted: "SŚŠ$" }
-        CharacterKey { caption: "d"; captionShifted: "D"; symView: ":"; symView2: "|"; accents: "dð"; accentsShifted: "DÐ" }
+        CharacterKey { caption: "d"; captionShifted: "D"; symView: ":"; symView2: "|"; accents: "dďð"; accentsShifted: "DĎÐ" }
         CharacterKey { caption: "f"; captionShifted: "F"; symView: ";"; symView2: "~" }
         CharacterKey { caption: "g"; captionShifted: "G"; symView: "("; symView2: "“" }
         CharacterKey { caption: "h"; captionShifted: "H"; symView: ")"; symView2: "”" }
