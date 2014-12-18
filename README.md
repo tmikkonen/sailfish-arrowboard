@@ -13,6 +13,6 @@ After copying, remember to restart the maliit server:
 
 NOTE! Starting from SailfishOS 1.0.4.x the new keyboard must be manually enabled from settings if it has not been in use before 1.0.4.x.
 
-UPDATE: The VKB continues to work normally after update to 1.1.0.39 "Uitukka" so it is "update proof" (for now). Of course, this may vary in the future updates if the VKB handling in SailfishOS should change.    
+UPDATE: The VKB continues to work normally after update to 1.1.1.26 "Vaarainjärvi" so it is "update proof" (for now). Of course, this may vary in the future updates if the VKB handling in SailfishOS should change.    
 
 TODO: RPM package for easier installation.
