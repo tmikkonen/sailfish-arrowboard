@@ -42,7 +42,8 @@ KeyboardRow {
     CharacterKey {
         caption: "."
         captionShifted: "."
-        accents: ".:;"
+        accents: ".ªº:;"
+        accentsShifted: ".ªº:;"
         width: punctuationKeyWidth-12
         fixedWidth: true
         separator: false
