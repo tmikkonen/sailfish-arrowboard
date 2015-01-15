@@ -34,11 +34,11 @@ KeyboardRow {
     ContextAwareCommaKey {
         width: punctuationKeyWidth-5
     }
-    CustomArrowKey { direction: "left" }
+    CustomModArrowKey { direction: "left" }
     SpacebarKey {
         fixedWidth: true
     }
-    CustomArrowKey { direction: "right" }
+    CustomModArrowKey { direction: "right" }
     CharacterKey {
         caption: "."
         captionShifted: "."
