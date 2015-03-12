@@ -15,7 +15,7 @@ Starting from SailfishOS 1.0.4.x the new keyboard must be manually enabled in de
 
 NOTE! The VKB continues to work normally after update to 1.1.2.16 "Yliaavanlampi" so it is "update proof" (for now). Of course, this may vary in the future updates if the VKB handling in SailfishOS should change.    
 
-LATEST RELEASE: V0.4
-- Changelog: New SHIFT Key appearance in SymView.
+LATEST RELEASE: v0.4
+* Changelog: New SHIFT Key appearance in SymView.
 
 TODO: RPM package for easier installation.
