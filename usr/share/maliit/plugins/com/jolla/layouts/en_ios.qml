@@ -32,7 +32,7 @@ KeyboardLayout {
     }
 
     KeyboardRow {
-        ShiftKey {}
+        ShiftKeyMod {}
 
         CharacterKey { caption: "z"; captionShifted: "Z"; symView: "<"; symView2: "«"; accents: "zžźż"; accentsShifted: "ZŽŹŻ" }
         CharacterKey { caption: "x"; captionShifted: "X"; symView: ">"; symView2: "»" }
