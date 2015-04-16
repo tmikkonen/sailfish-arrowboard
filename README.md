@@ -13,7 +13,7 @@ After copying, remember to restart the maliit server:
 
 Starting from SailfishOS 1.0.4.x the new keyboard must be manually enabled in device settings if it has not been in use before 1.0.4.x.
 
-NOTE! The VKB continues to work normally after update to 1.1.2.16 "Yliaavanlampi" so it is "update proof" (for now). Of course, this may vary in the future updates if the VKB handling in SailfishOS should change.    
+NOTE! The VKB <s>continues to work normally after update to 1.1.2.16 "Yliaavanlampi" so it is "update proof" (for now). Of course, this may vary in the future updates if the VKB handling in SailfishOS should change.</s> does NOT WORK after upgrade to 1.1.4.28 (Äijänpäivänjärvi). Go to <em>Settings -> System -> Text input</em> and pick another <em>Active keyboard</em> for now.
 
 LATEST RELEASE: v0.4
 * Changelog: New SHIFT Key appearance in SymView.
