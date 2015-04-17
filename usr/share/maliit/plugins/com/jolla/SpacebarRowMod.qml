@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 Jolla ltd. and/or its subsidiary(-ies). All rights reserved.
+ * Copyright (C) 2013 Jolla ltd and/or its subsidiary(-ies). All rights reserved.
  *
  * Contact: Pekka Vuorela <pekka.vuorela@jollamobile.com>
  *
@@ -11,7 +11,7 @@
  * Redistributions in binary form must reproduce the above copyright notice, this list
  * of conditions and the following disclaimer in the documentation and/or other materials
  * provided with the distribution.
- * Neither the name of Jolla ltd nor the names of its contributors may be
+ * Neither the name of Nokia Corporation nor the names of its contributors may be
  * used to endorse or promote products derived from this software without specific
  * prior written permission.
  *
@@ -29,42 +29,27 @@
 
 import QtQuick 2.0
 import com.jolla.keyboard 1.0
-import Sailfish.Silica 1.0
 
-FunctionKey {
-    id: symbolKey
+KeyboardRow {
+    splitIndex: 4
 
-    property int _charactersWhenPressed
-    property bool _quickPicking
-
-    caption: attributes.inSymView ? "ABC" : "123"
-    width: functionKeyWidth-47
-    keyType: KeyType.SymbolKey
-
-    onPressedChanged: {
-        if (pressed && !keyboard.inSymView && keyboard.lastInitialKey === symbolKey) {
-            keyboard.deadKeyAccent = ""
-            keyboard.toggleSymbolMode()
-            _quickPicking = true
-        } else {
-            _quickPicking = false
-        }
-
-        _charactersWhenPressed = keyboard.characterKeyCounter
+    SymbolKeyMod {}
+    ContextAwareCommaKey {}
+    CustomArrowKeyMod { direction: "left" }
+    SpacebarKey {}
+    SpacebarKey {
+        active: splitActive
+        languageLabel: ""
     }
-
-    onClicked: {
-        if (!_quickPicking || keyboard.characterKeyCounter > _charactersWhenPressed) {
-            keyboard.toggleSymbolMode()
-        }
+    CustomArrowKeyMod { direction: "right" }
+    CharacterKey {
+        caption: "."
+        captionShifted: "."
+        accents: ".ªº:;"
+        accentsShifted: ".ªº:;"
+        implicitWidth: punctuationKeyWidth-12
+        fixedWidth: !splitActive
+        separator: SeparatorState.HiddenSeparator
     }
-
-    Rectangle {
-        color: parent.pressed ? Theme.highlightBackgroundColor : Theme.primaryColor
-        opacity: parent.pressed ? 0.6 : 0.17
-        radius: geometry.keyRadius
-
-        anchors.fill: parent
-        anchors.margins: Theme.paddingMedium
-    }
+    EnterKeyMod {}
 }

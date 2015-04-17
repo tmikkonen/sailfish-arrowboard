@@ -37,7 +37,7 @@ FunctionKey {
     property int _charactersWhenPressed
     property bool _quickPicking
 
-    width: shiftKeyWidth
+    implicitWidth: shiftKeyWidth
     icon.source: attributes.inSymView ? ""
                                       : (attributes.isShifted && !attributes.isShiftLocked ? "image://theme/icon-m-autocaps"
                                                                                            : "image://theme/icon-m-capslock")
@@ -75,10 +75,11 @@ FunctionKey {
             }
         }
     }
-    
+
     Rectangle {
         color: parent.pressed ? Theme.highlightBackgroundColor : Theme.primaryColor
-        opacity: !attributes.inSymView ? 0 : parent.pressed ? 0.6 : 0.17
+        visible: attributes.inSymView
+        opacity: parent.pressed ? 0.6 : 0.17
         radius: geometry.keyRadius
 
         anchors.fill: parent

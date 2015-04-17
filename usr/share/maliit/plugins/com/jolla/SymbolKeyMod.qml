@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013 Jolla ltd and/or its subsidiary(-ies). All rights reserved.
+ * Copyright (C) 2013 Jolla ltd. and/or its subsidiary(-ies). All rights reserved.
  *
  * Contact: Pekka Vuorela <pekka.vuorela@jollamobile.com>
  *
@@ -11,7 +11,7 @@
  * Redistributions in binary form must reproduce the above copyright notice, this list
  * of conditions and the following disclaimer in the documentation and/or other materials
  * provided with the distribution.
- * Neither the name of Nokia Corporation nor the names of its contributors may be
+ * Neither the name of Jolla ltd nor the names of its contributors may be
  * used to endorse or promote products derived from this software without specific
  * prior written permission.
  *
@@ -28,25 +28,44 @@
  */
 
 import QtQuick 2.0
+import com.jolla.keyboard 1.0
+import Sailfish.Silica 1.0
 
-KeyboardRow {
-    SymbolKeyNarrow {}
-    ContextAwareCommaKey {
-        width: punctuationKeyWidth-5
+FunctionKey {
+    id: symbolKey
+
+    property int _charactersWhenPressed
+    property bool _quickPicking
+    property string symbolCaption: "ABC"
+
+    caption: attributes.inSymView ? symbolCaption : "123"
+    implicitWidth: functionKeyWidth-47
+    keyType: KeyType.SymbolKey
+
+    onPressedChanged: {
+        if (pressed && !keyboard.inSymView && keyboard.lastInitialKey === symbolKey) {
+            keyboard.deadKeyAccent = ""
+            keyboard.toggleSymbolMode()
+            _quickPicking = true
+        } else {
+            _quickPicking = false
+        }
+
+        _charactersWhenPressed = keyboard.characterKeyCounter
     }
-    CustomModArrowKey { direction: "left" }
-    SpacebarKey {
-        fixedWidth: true
+
+    onClicked: {
+        if (!_quickPicking || keyboard.characterKeyCounter > _charactersWhenPressed) {
+            keyboard.toggleSymbolMode()
+        }
     }
-    CustomModArrowKey { direction: "right" }
-    CharacterKey {
-        caption: "."
-        captionShifted: "."
-        accents: ".ªº:;"
-        accentsShifted: ".ªº:;"
-        width: punctuationKeyWidth-12
-        fixedWidth: true
-        separator: false
+
+    Rectangle {
+        color: parent.pressed ? Theme.highlightBackgroundColor : Theme.primaryColor
+        opacity: parent.pressed ? 0.6 : 0.17
+        radius: geometry.keyRadius
+
+        anchors.fill: parent
+        anchors.margins: Theme.paddingMedium
     }
-    EnterKeyNarrow {}
 }

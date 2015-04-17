@@ -1,4 +1,3 @@
-// Modified from en.qml made by Jolla Ltd.
 // Copyright (C) 2012-2013 Jolla Ltd.
 // Contact: Pekka Vuorela <pekka.vuorela@jollamobile.com>
 
@@ -6,6 +5,8 @@ import QtQuick 2.0
 import ".."
 
 KeyboardLayout {
+    splitSupported: true
+
     KeyboardRow {
         CharacterKey { caption: "q"; captionShifted: "Q"; symView: "1"; symView2: "[" }
         CharacterKey { caption: "w"; captionShifted: "W"; symView: "2"; symView2: "]" }
@@ -20,6 +21,8 @@ KeyboardLayout {
     }
 
     KeyboardRow {
+        splitIndex: 4
+
         CharacterKey { caption: "a"; captionShifted: "A"; symView: "-"; symView2: "_"; accents: "aàáâäæãåąă"; accentsShifted: "AÀÁÂÄÆÃÅĄĂ"}
         CharacterKey { caption: "s"; captionShifted: "S"; symView: "/"; symView2: "\\"; accents: "sßśšș$"; accentsShifted: "SŚŠȘ$" }
         CharacterKey { caption: "d"; captionShifted: "D"; symView: ":"; symView2: "|"; accents: "dđďð"; accentsShifted: "DĐĎÐ" }
@@ -32,6 +35,8 @@ KeyboardLayout {
     }
 
     KeyboardRow {
+        splitIndex: 5
+
         ShiftKeyMod {}
 
         CharacterKey { caption: "z"; captionShifted: "Z"; symView: "<"; symView2: "«"; accents: "zžźż"; accentsShifted: "ZŽŹŻ" }
@@ -45,5 +50,5 @@ KeyboardLayout {
         BackspaceKey {}
     }
 
-    SpacebarRowArrow {}
+    SpacebarRowMod {}
 }
