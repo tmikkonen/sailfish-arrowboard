@@ -13,9 +13,12 @@ After copying, remember to restart the maliit server:
 
 Starting from SailfishOS 1.0.4.x the new keyboard must be manually enabled in device settings if it has not been in use before 1.0.4.x.
 
-NOTE! The VKB <s>continues to work normally after update to 1.1.2.16 "Yliaavanlampi" so it is "update proof" (for now). Of course, this may vary in the future updates if the VKB handling in SailfishOS should change.</s> does NOT WORK after upgrade to 1.1.4.28 (Äijänpäivänjärvi). Go to <em>Settings -> System -> Text input</em> and pick another <em>Active keyboard</em> for now.
+NOTE! For SailfishOS 1.1.4.28 (Äijänpäivänjärvi) please upgrade to v0.5 (or later). Another option is going to <em>Settings -> System -> Text input</em> and picking some other <em>Active keyboard</em> to use.
 
-LATEST RELEASE: v0.4
+LATEST RELEASE: v0.5 - <strong>Minimum</strong> SailfishOS version required <strong>1.1.4.28</strong> (Äijänpäivänjärvi)
+* Changelog: Support for landscape split keyboard. Renaming of modified files (files <em>CustomModArrowKey.qml</em>, <em>EnterKeyNarrow.qml</em>, <em>SpacebarRowArrow.qml</em> & <em>SymbolKeyNarrow.qml</em> can be removed, but is not necessary).
+
+v0.4 - Last working SailfishOS version 1.1.2.16 (Yliaavanlampi)
 * Changelog: New SHIFT Key appearance in SymView.
 
 TODO: RPM package for easier installation.
