@@ -34,7 +34,7 @@ KeyboardRow {
     splitIndex: 4
 
     SymbolKeyMod {}
-    ContextAwareCommaKey {}
+    ContextAwareCommaKeyMod {}
     CustomArrowKeyMod { direction: "left" }
     SpacebarKey {}
     SpacebarKey {
@@ -45,8 +45,8 @@ KeyboardRow {
     CharacterKey {
         caption: "."
         captionShifted: "."
-        accents: ".ªº:;"
-        accentsShifted: ".ªº:;"
+        accents: ".ªº?!"
+        accentsShifted: ".ªº?!"
         implicitWidth: punctuationKeyWidth-12
         fixedWidth: !splitActive
         separator: SeparatorState.HiddenSeparator
