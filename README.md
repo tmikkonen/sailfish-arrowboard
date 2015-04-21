@@ -9,13 +9,16 @@ Copy *.qml and *.conf files to the equivalent directories on the device.
 No need to replace any system files.
 
 After copying, remember to restart the maliit server:
-"killall maliit-server"
+"killall maliit-server", or Restart keyboard in Sailfish Utilities.
 
 Starting from SailfishOS 1.0.4.x the new keyboard must be manually enabled in device settings if it has not been in use before 1.0.4.x.
 
 NOTE! For SailfishOS 1.1.4.28 (Äijänpäivänjärvi) please upgrade to v0.5 (or later). Another option is going to <em>Settings -> System -> Text input</em> and picking some other <em>Active keyboard</em> to use.
 
-LATEST RELEASE: v0.5 - <strong>Minimum</strong> SailfishOS version required <strong>1.1.4.28</strong> (Äijänpäivänjärvi)
+LATEST RELEASE: v0.5.1
+* Changelog: Popper for ContextAwareCommaKey. EXTRA: The default English layout with ARROW keys included as another keyboard (Enable "English-<^V>" in Settings->System->Text input->Keyboards)
+
+v0.5 - <strong>Minimum</strong> SailfishOS version required <strong>1.1.4.28</strong> (Äijänpäivänjärvi)
 * Changelog: Support for landscape split keyboard. Renaming of modified files (files <em>CustomModArrowKey.qml</em>, <em>EnterKeyNarrow.qml</em>, <em>SpacebarRowArrow.qml</em> & <em>SymbolKeyNarrow.qml</em> can be removed, but is not necessary).
 
 v0.4 - Last working SailfishOS version 1.1.2.16 (Yliaavanlampi)
