@@ -29,6 +29,7 @@
 
 import QtQuick 2.0
 import com.jolla.keyboard 1.0
+import com.meego.maliitquick 1.0
 
 KeyboardRow {
     splitIndex: 4
@@ -36,17 +37,36 @@ KeyboardRow {
     SymbolKeyMod {}
     ContextAwareCommaKeyMod {}
     CustomArrowKeyMod { direction: "left" }
-    SpacebarKey {}
+    SpacebarKey {
+        caption: MInputMethodQuick.contentType === Maliit.UrlContentType
+                 ? ".com"
+                 : " "
+        captionShifted: MInputMethodQuick.contentType === Maliit.UrlContentType
+                        ? ".com"
+                        : " "
+        key: MInputMethodQuick.contentType === Maliit.UrlContentType
+             ? Qt.NoButton
+             : Qt.Key_Space
+        languageLabel: MInputMethodQuick.contentType === Maliit.UrlContentType
+                       ? ""
+                       : languageCode
+    }
     SpacebarKey {
         active: splitActive
+        caption: MInputMethodQuick.contentType === Maliit.UrlContentType
+                 ? ".org"
+                 : " "
+        captionShifted: MInputMethodQuick.contentType === Maliit.UrlContentType
+                        ? ".org"
+                        : " "
         languageLabel: ""
     }
     CustomArrowKeyMod { direction: "right" }
     CharacterKey {
         caption: "."
         captionShifted: "."
-        accents: ".ªº?!"
-        accentsShifted: ".ªº?!"
+        accents: ".ªº'?!"
+        accentsShifted: ".ªº'?!"
         implicitWidth: punctuationKeyWidth-12
         fixedWidth: !splitActive
         separator: SeparatorState.HiddenSeparator
