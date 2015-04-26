@@ -5,9 +5,7 @@ English QWERTY virtual keyboard for SailfishOS with a custom symbol layout that 
 
 ---
 
-EASY INSTALL: RPM in <a href="https://openrepos.net/content/tmi/english-qwerty-arrow-keyboard">OpenRepos</a>
-
-===
+EASY INSTALL: RPM in <a href="https://openrepos.net/content/tmi/english-qwerty-arrow-keyboard">OpenRepos</a>.
 
 MANUAL INSTALL:
 Use developer mode (i.e. "devel-su"). 
@@ -16,6 +14,8 @@ File path starts from the device's root (/) directory.  Copy *.qml and *.conf fi
 
 After copying, restart the maliit server:
 "killall maliit-server", or Restart keyboard in Sailfish Utilities if installed.
+
+---
 
 Starting from v0.5.1 the default English layout is also included with only the SpacebarRow modified.
 Enable the new keyboard(s) <strong>English-iOS</strong> and/or <strong>English-<^V></strong> in Settings->System->Text input->Keyboards if installing for the first time.
