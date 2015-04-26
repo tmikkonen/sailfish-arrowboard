@@ -5,7 +5,11 @@ English QWERTY virtual keyboard for SailfishOS with a custom symbol layout that 
 
 ---
 
-INSTALLING:
+EASY INSTALL: RPM in <a href="https://openrepos.net/content/tmi/english-qwerty-arrow-keyboard">OpenRepos</a>
+
+===
+
+MANUAL INSTALL:
 Use developer mode (i.e. "devel-su"). 
 
 File path starts from the device's root (/) directory.  Copy *.qml and *.conf files to the equivalent directories on the device. No need to replace any system files.
@@ -33,5 +37,3 @@ v0.4 - Last working SailfishOS version 1.1.2.16 (Yliaavanlampi)
 * Changelog: New SHIFT Key appearance in SymView.
 
 ---
-
-TODO: RPM package for easier installation.
