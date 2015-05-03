@@ -24,7 +24,10 @@ Enable the new keyboard(s) <strong>English-iOS</strong> and/or <strong>English-<
 
 NOTE! For SailfishOS 1.1.4.x (Äijänpäivänjärvi) please upgrade to v0.5 or later.
 
-LATEST RELEASE: v0.6
+LATEST RELEASE: v0.6.1
+* Changelog: FIXED the use of wrong dictionary after changing from another language KBD to English-iOS due to custom language code, changed to standard codes in conf files. Added support for .fi/.se -domains instead of "https://" when keyboard language is FI or SV. This version will support the <a href="https://openrepos.net/content/tmi/finnishswedish-qwerty-arrow-keyboard-add">Finnish/Swedish QWERTY Arrow Keyboard ADD-ON</a>
+
+v0.6
 * Changelog: Domain keys ".com", ".net", ".org" added as top row in keyboard in URLS. Protocol key "https://" added to top row in URLS. Domain key functionality removed from SPACE key.
 
 v0.5.2

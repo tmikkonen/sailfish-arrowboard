@@ -6,8 +6,10 @@ KeyboardRow {
 
     DomainKeyMod {
         id: dk1
-        caption: "https://"
-        text: "https://"
+        caption: languageCode === "SV" ? ".se"
+                 : languageCode === "FI" ? ".fi" : "https://"
+        text: languageCode === "SV" ? ".se"
+              : languageCode === "FI" ? ".fi" : "https://"
         anchors.left: parent.left
     }
     DomainKeyMod {
