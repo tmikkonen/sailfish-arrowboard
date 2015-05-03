@@ -29,9 +29,16 @@
 
 import QtQuick 2.0
 import ".."
+import com.meego.maliitquick 1.0
 
 KeyboardLayout {
     splitSupported: true
+
+    DomainKeyRowMod {
+        visible: MInputMethodQuick.contentType === Maliit.UrlContentType
+                ? true
+                : false;
+    }
 
     KeyboardRow {
         CharacterKey { caption: "q"; captionShifted: "Q"; symView: "1"; symView2: "€" }

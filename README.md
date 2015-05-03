@@ -22,9 +22,12 @@ Enable the new keyboard(s) <strong>English-iOS</strong> and/or <strong>English-<
 
 ---
 
-NOTE! For SailfishOS 1.1.4.28 (Äijänpäivänjärvi) please upgrade to v0.5 or later.
+NOTE! For SailfishOS 1.1.4.x (Äijänpäivänjärvi) please upgrade to v0.5 or later.
 
-LATEST RELEASE: v0.5.2
+LATEST RELEASE: v0.6
+* Changelog: Domain keys ".com", ".net", ".org" added as top row in keyboard in URLS. Protocol key "https://" added to top row in URLS. Domain key functionality removed from SPACE key.
+
+v0.5.2
 * Changelog: SPACE->".com" (+".org" in split keyboard) when typing URLs. Apostrophe (') added to the dot(.) key. The default English layout's language code changed to just "EN".
 
 v0.5.1
