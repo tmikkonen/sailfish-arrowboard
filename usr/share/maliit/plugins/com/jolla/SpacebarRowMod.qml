@@ -35,7 +35,9 @@ KeyboardRow {
     splitIndex: 4
 
     SymbolKeyMod {}
-    ContextAwareCommaKeyMod {}
+    ContextAwareCommaKeyMod {
+        implicitWidth: punctuationKeyWidth - 2
+    }
     CustomArrowKeyMod { direction: "left" }
     SpacebarKey {
         languageLabel: canvas.layoutModel.get(canvas.activeIndex).name.slice(-3) === "iOS"
@@ -52,7 +54,7 @@ KeyboardRow {
         captionShifted: "."
         accents: ".ªº'?!"
         accentsShifted: ".ªº'?!"
-        implicitWidth: punctuationKeyWidth-12
+        implicitWidth: punctuationKeyWidth - 10
         fixedWidth: !splitActive
         separator: SeparatorState.HiddenSeparator
     }

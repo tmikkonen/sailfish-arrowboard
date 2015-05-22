@@ -41,10 +41,10 @@ FunctionKey {
     property string direction
     property string directionShifted
     property int arrowKeyWidth: 52
-    icon.source: (((direction === "up") || ((direction === "left") && attributes.inSymView)) ? "image://theme/icon-l-up"
-               :  ((direction === "down") || ((direction === "right") && attributes.inSymView)) ? "image://theme/icon-l-down"
-               :   (direction === "left") ? "image://theme/icon-l-left"
-               :   (direction === "right") ? "image://theme/icon-l-right" : "") + (pressed ? ("?" + Theme.highlightColor) : "")
+    icon.source: (((direction === "up") || ((direction === "left") && attributes.inSymView)) ? "image://theme/icon-m-up"
+               :  ((direction === "down") || ((direction === "right") && attributes.inSymView)) ? "image://theme/icon-m-down"
+               :   (direction === "left") ? "image://theme/icon-m-left"
+               :   (direction === "right") ? "image://theme/icon-m-right" : "") + (pressed ? ("?" + Theme.highlightColor) : "")
     repeat: true
     key: Qt.Key_unknown
     implicitWidth: arrowKeyWidth
