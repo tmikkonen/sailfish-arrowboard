@@ -1,8 +1,7 @@
-/*
- * Copyright (C) 2013 Jolla ltd and/or its subsidiary(-ies). All rights reserved.
- *
- * Contact: Pekka Vuorela <pekka.vuorela@jollamobile.com>
- *
+/* Copyright (c) 2015 tmi
+ * Copyright (C) 2014 Jolla Ltd.
+ * All rights reserved.
+ * 
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
  *
@@ -24,39 +23,44 @@
  * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
  */
 
 import QtQuick 2.0
 import com.jolla.keyboard 1.0
-import Sailfish.Silica 1.0
+import ".."
+import com.meego.maliitquick 1.0
 
 KeyboardRow {
-    splitIndex: 4
+    splitIndex: 2
+    visible: MInputMethodQuick.contentType === Maliit.UrlContentType
+                ? true
+                : false;
 
-    SymbolKeyMod {}
-    ContextAwareCommaKeyMod {
-        implicitWidth: punctuationKeyWidth - 2
+    DomainKey {
+        id: dk1
+        caption: languageCode === "SV" ? ".se"
+                 : languageCode === "FI" ? ".fi"
+                 : languageCode === "CS" ? ".cz" : "https://"
+        text: languageCode === "SV" ? ".se"
+              : languageCode === "FI" ? ".fi"
+              : languageCode === "CS" ? ".cz" : "https://"
+        anchors.left: parent.left
     }
-    CustomArrowKeyMod { direction: "left" }
-    SpacebarKey {
-        languageLabel: canvas.layoutModel.get(canvas.activeIndex).name.slice(-3) === "iOS"
-                       ? languageCode + "-iOS"
-                       : languageCode
+    DomainKey {
+        caption: ".com"
+        text: ".com"
+        anchors.left: dk1.right
     }
-    SpacebarKey {
-        active: splitActive
-        languageLabel: ""
+    DomainKey {
+        caption: ".net"
+        text: ".net"
+        anchors.right: dk4.left
     }
-    CustomArrowKeyMod { direction: "right" }
-    CharacterKey {
-        caption: "."
-        captionShifted: "."
-        accents: ".ªº'?!"
-        accentsShifted: ".ªº'?!"
-        implicitWidth: punctuationKeyWidth - 10
-        fixedWidth: !splitActive
-        separator: SeparatorState.HiddenSeparator
+    DomainKey {
+        id: dk4
+        caption: ".org"
+        text: ".org"
+        anchors.right: parent.right
     }
-    EnterKeyMod {}
+
 }

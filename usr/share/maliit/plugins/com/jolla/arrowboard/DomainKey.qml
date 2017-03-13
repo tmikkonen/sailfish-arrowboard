@@ -1,8 +1,7 @@
-/*
- * Copyright (C) 2013 Jolla ltd. and/or its subsidiary(-ies). All rights reserved.
- *
- * Contact: Pekka Vuorela <pekka.vuorela@jollamobile.com>
- *
+/* Copyright (c) 2015-2017 tmi 
+ * Copyright (C) 2014 Jolla Ltd.
+ * All rights reserved.
+ * 
  * Redistribution and use in source and binary forms, with or without modification,
  * are permitted provided that the following conditions are met:
  *
@@ -11,7 +10,7 @@
  * Redistributions in binary form must reproduce the above copyright notice, this list
  * of conditions and the following disclaimer in the documentation and/or other materials
  * provided with the distribution.
- * Neither the name of Jolla ltd nor the names of its contributors may be
+ * Neither the name of Nokia Corporation nor the names of its contributors may be
  * used to endorse or promote products derived from this software without specific
  * prior written permission.
  *
@@ -24,48 +23,16 @@
  * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- *
  */
 
 import QtQuick 2.0
-import com.jolla.keyboard 1.0
 import Sailfish.Silica 1.0
+import ".."
 
 FunctionKey {
-    id: symbolKey
+    property bool landscape
 
-    property int _charactersWhenPressed
-    property bool _quickPicking
-    property string symbolCaption: "ABC"
-
-    caption: attributes.inSymView ? symbolCaption : "123"
-    implicitWidth: functionKeyWidth-47
-    keyType: KeyType.SymbolKey
-
-    onPressedChanged: {
-        if (pressed && !keyboard.inSymView && keyboard.lastInitialKey === symbolKey) {
-            keyboard.deadKeyAccent = ""
-            keyboard.toggleSymbolMode()
-            _quickPicking = true
-        } else {
-            _quickPicking = false
-        }
-
-        _charactersWhenPressed = keyboard.characterKeyCounter
-    }
-
-    onClicked: {
-        if (!_quickPicking || keyboard.characterKeyCounter > _charactersWhenPressed) {
-            keyboard.toggleSymbolMode()
-        }
-    }
-
-    Rectangle {
-        color: parent.pressed ? Theme.highlightBackgroundColor : Theme.primaryColor
-        opacity: parent.pressed ? 0.6 : 0.17
-        radius: geometry.keyRadius
-
-        anchors.fill: parent
-        anchors.margins: Theme.paddingMedium
-    }
+    key: Qt.Key_unknown
+    implicitWidth: landscape ? geometry.keyboardWidthLandscape / 4
+                             : geometry.keyboardWidthPortrait / 4
 }

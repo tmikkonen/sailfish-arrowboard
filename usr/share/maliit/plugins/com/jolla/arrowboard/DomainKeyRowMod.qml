@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import com.jolla.keyboard 1.0
+import ".."
 
 KeyboardRow {
     splitIndex: 2
@@ -7,9 +8,11 @@ KeyboardRow {
     DomainKeyMod {
         id: dk1
         caption: languageCode === "SV" ? ".se"
-                 : languageCode === "FI" ? ".fi" : "https://"
+                 : languageCode === "FI" ? ".fi"
+                 : languageCode === "CS" ? ".cz" : "https://"
         text: languageCode === "SV" ? ".se"
-              : languageCode === "FI" ? ".fi" : "https://"
+              : languageCode === "FI" ? ".fi"
+              : languageCode === "CS" ? ".cz" : "https://"
         anchors.left: parent.left
     }
     DomainKeyMod {

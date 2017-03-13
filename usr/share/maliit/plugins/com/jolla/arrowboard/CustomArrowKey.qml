@@ -1,4 +1,5 @@
-/* Copyright (c) 2014 Janne Edelman <janne.edelman@gmail.com>
+/* width->implicitWidth fix 2015 by tmi
+ * Copyright (c) 2014 Janne Edelman <janne.edelman@gmail.com>
  * Copyright (C) 2012-2013 Jolla Ltd.
  * All rights reserved.
  * 
@@ -41,10 +42,10 @@ FunctionKey {
     property string direction
     property string directionShifted
     property int arrowKeyWidth: 52
-    icon.source: (((direction === "up") || ((direction === "left") && attributes.inSymView)) ? "image://theme/icon-m-up"
-               :  ((direction === "down") || ((direction === "right") && attributes.inSymView)) ? "image://theme/icon-m-down"
-               :   (direction === "left") ? "image://theme/icon-m-left"
-               :   (direction === "right") ? "image://theme/icon-m-right" : "") + (pressed ? ("?" + Theme.highlightColor) : "")
+    icon.source: ((direction === "up") ? "image://theme/icon-l-up"
+               :  (direction === "down") ? "image://theme/icon-l-down"
+               :  (direction === "left") ? "image://theme/icon-l-left"
+               :  (direction === "right") ? "image://theme/icon-l-right" : "") + (pressed ? ("?" + Theme.highlightColor) : "")
     repeat: true
     key: Qt.Key_unknown
     implicitWidth: arrowKeyWidth
@@ -84,10 +85,10 @@ FunctionKey {
             MInputMethodQuick.sendKey(Qt.Key_Down, 0, "", Maliit.KeyClick)
             break
             case "left":
-            !attributes.inSymView ? MInputMethodQuick.sendKey(Qt.Key_Left, 0, "", Maliit.KeyClick) : MInputMethodQuick.sendKey(Qt.Key_Up, 0, "", Maliit.KeyClick)
+            MInputMethodQuick.sendKey(Qt.Key_Left, 0, "", Maliit.KeyClick)
             break
             case "right":
-            !attributes.inSymView ? MInputMethodQuick.sendKey(Qt.Key_Right, 0, "", Maliit.KeyClick) : MInputMethodQuick.sendKey(Qt.Key_Down, 0, "", Maliit.KeyClick)
+            MInputMethodQuick.sendKey(Qt.Key_Right, 0, "", Maliit.KeyClick)
             break;
             default:
             break;
