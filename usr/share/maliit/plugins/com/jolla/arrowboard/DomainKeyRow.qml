@@ -1,4 +1,4 @@
-/* Copyright (c) 2015 tmi
+/* Copyright (c) 2015-2017 tmi
  * Copyright (C) 2014 Jolla Ltd.
  * All rights reserved.
  * 
@@ -40,9 +40,15 @@ KeyboardRow {
         id: dk1
         caption: languageCode === "SV" ? ".se"
                  : languageCode === "FI" ? ".fi"
+                 : languageCode === "HU" ? ".hu"
+                 : languageCode === "LV" ? ".lv"
+                 : languageCode === "NL" ? ".nl"
                  : languageCode === "CS" ? ".cz" : "https://"
         text: languageCode === "SV" ? ".se"
               : languageCode === "FI" ? ".fi"
+              : languageCode === "HU" ? ".hu"
+              : languageCode === "LV" ? ".lv"
+              : languageCode === "NL" ? ".nl"
               : languageCode === "CS" ? ".cz" : "https://"
         anchors.left: parent.left
     }
